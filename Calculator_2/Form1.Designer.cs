@@ -32,43 +32,43 @@ namespace Calculator_2
         /// </summary>
         private void InitializeComponent()
         {
-            btnmulti = new Button();
+            btnMultiply = new Button();
             btn0 = new Button();
-            btndot = new Button();
-            btnequal = new Button();
+            btnDot = new Button();
+            btnEqual = new Button();
             btn1 = new Button();
             btn2 = new Button();
             btn3 = new Button();
-            btnplus = new Button();
+            btnPlus = new Button();
             btn4 = new Button();
             btn5 = new Button();
             btn6 = new Button();
-            btnminus = new Button();
+            btnMinus = new Button();
             btn7 = new Button();
             btn8 = new Button();
             btn9 = new Button();
-            btndivide = new Button();
-            btnPer = new Button();
-            btnn = new Button();
-            btnclear = new Button();
+            btnDivide = new Button();
+            btnPercentage = new Button();
+            btnSquare = new Button();
+            btnClear = new Button();
             btnerase = new Button();
             textBox = new TextBox();
             CalBox = new TextBox();
-            btnce = new Button();
-            btnfrac = new Button();
-            btnconvert = new Button();
-            btnroot = new Button();
+            btnCE = new Button();
+            btnFraction = new Button();
+            btnConvert = new Button();
+            btnRoot = new Button();
             SuspendLayout();
             // 
-            // btnmulti
+            // btnMultiply
             // 
-            btnmulti.Location = new Point(223, 248);
-            btnmulti.Name = "btnmulti";
-            btnmulti.Size = new Size(65, 43);
-            btnmulti.TabIndex = 0;
-            btnmulti.TabStop = false;
-            btnmulti.Text = "×";
-            btnmulti.UseVisualStyleBackColor = true;
+            btnMultiply.Location = new Point(223, 248);
+            btnMultiply.Name = "btnMultiply";
+            btnMultiply.Size = new Size(65, 43);
+            btnMultiply.TabIndex = 0;
+            btnMultiply.TabStop = false;
+            btnMultiply.Text = "×";
+            btnMultiply.UseVisualStyleBackColor = true;
             // 
             // btn0
             // 
@@ -80,25 +80,25 @@ namespace Calculator_2
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
             // 
-            // btndot
+            // btnDot
             // 
-            btndot.Location = new Point(154, 395);
-            btndot.Name = "btndot";
-            btndot.Size = new Size(65, 43);
-            btndot.TabIndex = 0;
-            btndot.TabStop = false;
-            btndot.Text = ".";
-            btndot.UseVisualStyleBackColor = true;
+            btnDot.Location = new Point(154, 395);
+            btnDot.Name = "btnDot";
+            btnDot.Size = new Size(65, 43);
+            btnDot.TabIndex = 0;
+            btnDot.TabStop = false;
+            btnDot.Text = ".";
+            btnDot.UseVisualStyleBackColor = true;
             // 
-            // btnequal
+            // btnEqual
             // 
-            btnequal.Location = new Point(223, 395);
-            btnequal.Name = "btnequal";
-            btnequal.Size = new Size(65, 43);
-            btnequal.TabIndex = 0;
-            btnequal.TabStop = false;
-            btnequal.Text = "=";
-            btnequal.UseVisualStyleBackColor = true;
+            btnEqual.Location = new Point(223, 395);
+            btnEqual.Name = "btnEqual";
+            btnEqual.Size = new Size(65, 43);
+            btnEqual.TabIndex = 0;
+            btnEqual.TabStop = false;
+            btnEqual.Text = "=";
+            btnEqual.UseVisualStyleBackColor = true;
             // 
             // btn1
             // 
@@ -130,15 +130,15 @@ namespace Calculator_2
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
             // 
-            // btnplus
+            // btnPlus
             // 
-            btnplus.Location = new Point(223, 346);
-            btnplus.Name = "btnplus";
-            btnplus.Size = new Size(65, 43);
-            btnplus.TabIndex = 0;
-            btnplus.TabStop = false;
-            btnplus.Text = "+";
-            btnplus.UseVisualStyleBackColor = true;
+            btnPlus.Location = new Point(223, 346);
+            btnPlus.Name = "btnPlus";
+            btnPlus.Size = new Size(65, 43);
+            btnPlus.TabIndex = 0;
+            btnPlus.TabStop = false;
+            btnPlus.Text = "+";
+            btnPlus.UseVisualStyleBackColor = true;
             // 
             // btn4
             // 
@@ -170,15 +170,15 @@ namespace Calculator_2
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
             // 
-            // btnminus
+            // btnMinus
             // 
-            btnminus.Location = new Point(223, 297);
-            btnminus.Name = "btnminus";
-            btnminus.Size = new Size(65, 43);
-            btnminus.TabIndex = 0;
-            btnminus.TabStop = false;
-            btnminus.Text = "-";
-            btnminus.UseVisualStyleBackColor = true;
+            btnMinus.Location = new Point(223, 297);
+            btnMinus.Name = "btnMinus";
+            btnMinus.Size = new Size(65, 43);
+            btnMinus.TabIndex = 0;
+            btnMinus.TabStop = false;
+            btnMinus.Text = "-";
+            btnMinus.UseVisualStyleBackColor = true;
             // 
             // btn7
             // 
@@ -210,45 +210,45 @@ namespace Calculator_2
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
             // 
-            // btndivide
+            // btnDivide
             // 
-            btndivide.Location = new Point(223, 199);
-            btndivide.Name = "btndivide";
-            btndivide.Size = new Size(65, 43);
-            btndivide.TabIndex = 0;
-            btndivide.TabStop = false;
-            btndivide.Text = "÷";
-            btndivide.UseVisualStyleBackColor = true;
+            btnDivide.Location = new Point(223, 199);
+            btnDivide.Name = "btnDivide";
+            btnDivide.Size = new Size(65, 43);
+            btnDivide.TabIndex = 0;
+            btnDivide.TabStop = false;
+            btnDivide.Text = "÷";
+            btnDivide.UseVisualStyleBackColor = true;
             // 
-            // btnPer
+            // btnPercentage
             // 
-            btnPer.Location = new Point(12, 150);
-            btnPer.Name = "btnPer";
-            btnPer.Size = new Size(65, 43);
-            btnPer.TabIndex = 0;
-            btnPer.TabStop = false;
-            btnPer.Text = "%";
-            btnPer.UseVisualStyleBackColor = true;
+            btnPercentage.Location = new Point(12, 150);
+            btnPercentage.Name = "btnPercentage";
+            btnPercentage.Size = new Size(65, 43);
+            btnPercentage.TabIndex = 0;
+            btnPercentage.TabStop = false;
+            btnPercentage.Text = "%";
+            btnPercentage.UseVisualStyleBackColor = true;
             // 
-            // btnn
+            // btnSquare
             // 
-            btnn.Location = new Point(83, 199);
-            btnn.Name = "btnn";
-            btnn.Size = new Size(65, 43);
-            btnn.TabIndex = 0;
-            btnn.TabStop = false;
-            btnn.Text = "x^2";
-            btnn.UseVisualStyleBackColor = true;
+            btnSquare.Location = new Point(83, 199);
+            btnSquare.Name = "btnSquare";
+            btnSquare.Size = new Size(65, 43);
+            btnSquare.TabIndex = 0;
+            btnSquare.TabStop = false;
+            btnSquare.Text = "x^2";
+            btnSquare.UseVisualStyleBackColor = true;
             // 
-            // btnclear
+            // btnClear
             // 
-            btnclear.Location = new Point(152, 150);
-            btnclear.Name = "btnclear";
-            btnclear.Size = new Size(65, 43);
-            btnclear.TabIndex = 0;
-            btnclear.TabStop = false;
-            btnclear.Text = "C";
-            btnclear.UseVisualStyleBackColor = true;
+            btnClear.Location = new Point(152, 150);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(65, 43);
+            btnClear.TabIndex = 0;
+            btnClear.TabStop = false;
+            btnClear.Text = "C";
+            btnClear.UseVisualStyleBackColor = true;
             // 
             // btnerase
             // 
@@ -290,45 +290,45 @@ namespace Calculator_2
             CalBox.TabStop = false;
             CalBox.TextAlign = HorizontalAlignment.Right;
             // 
-            // btnce
+            // btnCE
             // 
-            btnce.Location = new Point(83, 150);
-            btnce.Name = "btnce";
-            btnce.Size = new Size(65, 43);
-            btnce.TabIndex = 0;
-            btnce.TabStop = false;
-            btnce.Text = "CE";
-            btnce.UseVisualStyleBackColor = true;
+            btnCE.Location = new Point(83, 150);
+            btnCE.Name = "btnCE";
+            btnCE.Size = new Size(65, 43);
+            btnCE.TabIndex = 0;
+            btnCE.TabStop = false;
+            btnCE.Text = "CE";
+            btnCE.UseVisualStyleBackColor = true;
             // 
-            // btnfrac
+            // btnFraction
             // 
-            btnfrac.Location = new Point(12, 199);
-            btnfrac.Name = "btnfrac";
-            btnfrac.Size = new Size(65, 43);
-            btnfrac.TabIndex = 0;
-            btnfrac.TabStop = false;
-            btnfrac.Text = "1/x";
-            btnfrac.UseVisualStyleBackColor = true;
+            btnFraction.Location = new Point(12, 199);
+            btnFraction.Name = "btnFraction";
+            btnFraction.Size = new Size(65, 43);
+            btnFraction.TabIndex = 0;
+            btnFraction.TabStop = false;
+            btnFraction.Text = "1/x";
+            btnFraction.UseVisualStyleBackColor = true;
             // 
-            // btnconvert
+            // btnConvert
             // 
-            btnconvert.Location = new Point(12, 395);
-            btnconvert.Name = "btnconvert";
-            btnconvert.Size = new Size(65, 43);
-            btnconvert.TabIndex = 0;
-            btnconvert.TabStop = false;
-            btnconvert.Text = "+/-";
-            btnconvert.UseVisualStyleBackColor = true;
+            btnConvert.Location = new Point(12, 395);
+            btnConvert.Name = "btnConvert";
+            btnConvert.Size = new Size(65, 43);
+            btnConvert.TabIndex = 0;
+            btnConvert.TabStop = false;
+            btnConvert.Text = "+/-";
+            btnConvert.UseVisualStyleBackColor = true;
             // 
-            // btnroot
+            // btnRoot
             // 
-            btnroot.Location = new Point(152, 199);
-            btnroot.Name = "btnroot";
-            btnroot.Size = new Size(65, 43);
-            btnroot.TabIndex = 0;
-            btnroot.TabStop = false;
-            btnroot.Text = "√x";
-            btnroot.UseVisualStyleBackColor = true;
+            btnRoot.Location = new Point(152, 199);
+            btnRoot.Name = "btnRoot";
+            btnRoot.Size = new Size(65, 43);
+            btnRoot.TabIndex = 0;
+            btnRoot.TabStop = false;
+            btnRoot.Text = "√x";
+            btnRoot.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -337,30 +337,30 @@ namespace Calculator_2
             ClientSize = new Size(300, 450);
             Controls.Add(CalBox);
             Controls.Add(textBox);
-            Controls.Add(btnroot);
+            Controls.Add(btnRoot);
             Controls.Add(btnerase);
-            Controls.Add(btnclear);
-            Controls.Add(btndivide);
+            Controls.Add(btnClear);
+            Controls.Add(btnDivide);
             Controls.Add(btn9);
-            Controls.Add(btnminus);
-            Controls.Add(btnconvert);
+            Controls.Add(btnMinus);
+            Controls.Add(btnConvert);
             Controls.Add(btn6);
-            Controls.Add(btnn);
-            Controls.Add(btnplus);
+            Controls.Add(btnSquare);
+            Controls.Add(btnPlus);
             Controls.Add(btn8);
             Controls.Add(btn3);
-            Controls.Add(btnfrac);
+            Controls.Add(btnFraction);
             Controls.Add(btn5);
-            Controls.Add(btnPer);
-            Controls.Add(btnequal);
+            Controls.Add(btnPercentage);
+            Controls.Add(btnEqual);
             Controls.Add(btn7);
             Controls.Add(btn2);
             Controls.Add(btn4);
-            Controls.Add(btndot);
+            Controls.Add(btnDot);
             Controls.Add(btn1);
-            Controls.Add(btnce);
+            Controls.Add(btnCE);
             Controls.Add(btn0);
-            Controls.Add(btnmulti);
+            Controls.Add(btnMultiply);
             KeyPreview = true;
             Name = "Form1";
             Text = "Form1";
@@ -371,31 +371,31 @@ namespace Calculator_2
 
         #endregion
 
-        private Button btnmulti;
+        private Button btnMultiply;
         private Button btn0;
-        private Button btndot;
-        private Button btnequal;
+        private Button btnDot;
+        private Button btnEqual;
         private Button btn1;
         private Button btn2;
         private Button btn3;
-        private Button btnplus;
+        private Button btnPlus;
         private Button btn4;
         private Button btn5;
         private Button btn6;
-        private Button btnminus;
+        private Button btnMinus;
         private Button btn7;
         private Button btn8;
         private Button btn9;
-        private Button btndivide;
-        private Button btnPer;
-        private Button btnn;
-        private Button btnclear;
+        private Button btnDivide;
+        private Button btnPercentage;
+        private Button btnSquare;
+        private Button btnClear;
         private Button btnerase;
         private TextBox textBox;
         private TextBox CalBox;
-        private Button btnce;
-        private Button btnfrac;
-        private Button btnconvert;
-        private Button btnroot;
+        private Button btnCE;
+        private Button btnFraction;
+        private Button btnConvert;
+        private Button btnRoot;
     }
 }
