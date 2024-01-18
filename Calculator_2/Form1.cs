@@ -3,7 +3,7 @@ namespace Calculator_2
     public partial class Form1 : Form
     {
         SaveNum Num = new SaveNum();
-       
+
 
         public Form1()
         {
@@ -45,161 +45,207 @@ namespace Calculator_2
 
         private void BtnOp_Click(object? sender, EventArgs e)
         {
-            Operator op = new Operator(this.Num);
             Button button = (Button)sender;
+
+            switch (button.Text)
+            {
+                case "+":
+                    Add();
+                    break;
+                case "-":
+                    Subtract();
+                    break;
+                case "×":
+                    Multiply();
+                    break;
+                case "÷":
+                    Divide();
+                    break;
+            }
+        }
+
+        private void Add()
+        {
+            Operator op = new Operator(this.Num);
+            double SumNum = Num.SumNum;
             double TextNum = Num.TextNum;
             double CalNum = Num.CalNum;
-            double SumNum = Num.SumNum;
 
             if (CalBox.Text == "") // Calbox가 빈칸일 때
             {
-                if ((string)button.Text == "+")
-                {
-                    CalBox.Text = textBox.Text + "+";
-                    //textBox.Text = Convert.ToString(TextNum);
-                    SumNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
-                }
-
-                else if ((string)button.Text == "-")
-                {
-                    CalBox.Text = textBox.Text + "-";
-                    //textBox.Text = Convert.ToString(TextNum);
-                    SumNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
-                }
-
-                else if ((string)button.Text == "×")
-                {
-                    CalBox.Text = textBox.Text + "×";
-                    //textBox.Text = Convert.ToString(TextNum);
-                    SumNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
-                }
-
-                else if ((string)button.Text == "÷")
-                {
-                    CalBox.Text = textBox.Text + "÷";
-                    //textBox.Text = Convert.ToString(TextNum);
-                    SumNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
-                }
+                CalBox.Text = textBox.Text + "+";
+                CalNum = TextNum;
             }
 
             else if (CalBox.Text.Contains("=")) // 계산이 끝난 후
             {
-                if ((string)button.Text == "+")
-                {
-                    CalBox.Text = SumNum + "+";
-                    textBox.Text = Convert.ToString(SumNum);
-                }
-
-                else if ((string)button.Text == "-")
-                {
-                    CalBox.Text = SumNum + "-";
-                    textBox.Text = Convert.ToString(SumNum);
-                }
-
-                else if ((string)button.Text == "×")
-                {
-                    CalBox.Text = SumNum + "×";
-                    textBox.Text = Convert.ToString(SumNum);
-                }
-
-                else if ((string)button.Text == "÷")
-                {
-                    CalBox.Text = SumNum + "÷";
-                    textBox.Text = Convert.ToString(SumNum);
-                }
+                CalBox.Text = SumNum + "+";
+                textBox.Text = Convert.ToString(SumNum);
             }
 
             else if (TextNum == SumNum) // Calbox에 있는 숫자랑 textbox에 있는 숫자랑 같을 때
             {
-                if ((string)button.Text == "+")
-                {
-                    CalBox.Text = CalBox.Text.Substring(0, CalBox.Text.Length - 1);
-                    CalBox.Text = TextNum + "+";
-                }
-
-                else if ((string)button.Text == "-")
-                {
-                    CalBox.Text = CalBox.Text.Substring(0, CalBox.Text.Length - 1);
-                    CalBox.Text = TextNum + "-";
-                }
-
-                else if ((string)button.Text == "×")
-                {
-                    CalBox.Text = CalBox.Text.Substring(0, CalBox.Text.Length - 1);
-                    CalBox.Text = TextNum + "×";
-                }
-
-                else if ((string)button.Text == "÷")
-                {
-                    CalBox.Text = CalBox.Text.Substring(0, CalBox.Text.Length - 1);
-                    CalBox.Text = TextNum + "÷";
-                }
+                CalBox.Text = CalBox.Text.Substring(0, CalBox.Text.Length - 1);
+                CalBox.Text = TextNum + "+";
             }
 
             else if (TextNum != CalNum) // Calbox에 있는 숫자랑 textbox에 있는 숫자랑 다를 때 ???????????????????????
             {
-                if ((string)button.Text == "+")
-                {
-                    CalNum = Convert.ToDouble(textBox.Text);
-                    TextNum = SumNum + CalNum;
-                    CalBox.Text = TextNum + "+";
-                    textBox.Text = Convert.ToString(TextNum);
-                }
-
-                else if ((string)button.Text == "-")
-                {
-                    CalNum = Convert.ToDouble(textBox.Text);
-                    TextNum = SumNum - CalNum;
-                    CalBox.Text = TextNum + "-";
-                    textBox.Text = Convert.ToString(TextNum);
-                }
-
-                else if ((string)button.Text == "×")
-                {
-                    CalNum = Convert.ToDouble(textBox.Text);
-                    TextNum = SumNum * CalNum;
-                    CalBox.Text = TextNum + "×";
-                    textBox.Text = Convert.ToString(TextNum);
-                }
-
-                else if ((string)button.Text == "÷")
-                {
-                    CalNum = Convert.ToDouble(textBox.Text);
-                    TextNum = SumNum / CalNum;
-                    CalBox.Text = TextNum + "÷";
-                    textBox.Text = Convert.ToString(TextNum);
-                }
+                CalNum = Convert.ToDouble(textBox.Text);
+                TextNum = SumNum + CalNum;
+                CalBox.Text = TextNum + "+";
+                textBox.Text = Convert.ToString(TextNum);
             }
             else
             {
-                switch (button.Text)
-                {
-                    case "+":
-                        CalNum = Convert.ToDouble(textBox.Text);
-                        TextNum = SumNum + CalNum;
-                        CalBox.Text = TextNum + "+";
-                        textBox.Text = Convert.ToString(TextNum);
-                        break;
-                    case "-":
-                        CalNum = Convert.ToDouble(textBox.Text);
-                        TextNum = SumNum - CalNum;
-                        CalBox.Text = TextNum + "-";
-                        textBox.Text = Convert.ToString(TextNum);
-                        break;
-                    case "×":
-                        CalNum = Convert.ToDouble(textBox.Text);
-                        TextNum = SumNum * CalNum;
-                        CalBox.Text = TextNum + "×";
-                        textBox.Text = Convert.ToString(TextNum);
-                        break;
-                    case "÷":
-                        CalNum = Convert.ToDouble(textBox.Text);
-                        TextNum = SumNum / CalNum;
-                        CalBox.Text = TextNum + "÷";
-                        textBox.Text = Convert.ToString(TextNum);
-                        break;
-                }
+                CalNum = Convert.ToDouble(textBox.Text);
+                TextNum = SumNum + CalNum;
+                CalBox.Text = TextNum + "+";
+                textBox.Text = Convert.ToString(TextNum);
             }
+
+            CalNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
+            TextNum = Convert.ToDouble(textBox.Text);
+            Num.TextNum = TextNum;
+            Num.SetNum(ref CalNum, ref TextNum, ref SumNum);
+        }
+
+        private void Subtract()
+        {
+            Operator op = new Operator(this.Num);
+            double SumNum = Num.SumNum;
+            double TextNum = Num.TextNum;
+            double CalNum = Num.CalNum;
+
+            if (CalBox.Text == "") // Calbox가 빈칸일 때
+            {
+                CalBox.Text = textBox.Text + "-";
+                //textBox.Text = Convert.ToString(TextNum);
+                SumNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
+            }
+
+            else if (CalBox.Text.Contains("=")) // 계산이 끝난 후
+            {
+                CalBox.Text = SumNum + "-";
+                textBox.Text = Convert.ToString(SumNum);
+            }
+
+            else if (TextNum == SumNum) // Calbox에 있는 숫자랑 textbox에 있는 숫자랑 같을 때
+            {
+                CalBox.Text = CalBox.Text.Substring(0, CalBox.Text.Length - 1);
+                CalBox.Text = TextNum + "-";
+            }
+
+            else if (TextNum != CalNum) // Calbox에 있는 숫자랑 textbox에 있는 숫자랑 다를 때 ???????????????????????
+            {
+                CalNum = Convert.ToDouble(textBox.Text);
+                TextNum = SumNum - CalNum;
+                CalBox.Text = TextNum + "-";
+                textBox.Text = Convert.ToString(TextNum);
+            }
+
+            else
+            {
+                CalNum = Convert.ToDouble(textBox.Text);
+                TextNum = SumNum - CalNum;
+                CalBox.Text = TextNum + "-";
+                textBox.Text = Convert.ToString(TextNum);
+            }
+
+            CalNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
+            TextNum = Convert.ToDouble(textBox.Text);
+            Num.TextNum = TextNum;
+            Num.SetNum(ref CalNum, ref TextNum, ref SumNum);
+        }
+
+        private void Multiply()
+        {
+            Operator op = new Operator(this.Num);
+            double SumNum = Num.SumNum;
+            double TextNum = Num.TextNum;
+            double CalNum = Num.CalNum;
+
+            if (CalBox.Text == "") // Calbox가 빈칸일 때
+            {
+                CalBox.Text = textBox.Text + "×";
+                //textBox.Text = Convert.ToString(TextNum);
+                SumNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
+            }
+
+            else if (CalBox.Text.Contains("=")) // 계산이 끝난 후
+            {
+                CalBox.Text = SumNum + "×";
+                textBox.Text = Convert.ToString(SumNum);
+            }
+
+            else if (TextNum == SumNum) // Calbox에 있는 숫자랑 textbox에 있는 숫자랑 같을 때
+            {
+                CalBox.Text = CalBox.Text.Substring(0, CalBox.Text.Length - 1);
+                CalBox.Text = TextNum + "×";
+            }
+
+            else if (TextNum != CalNum) // Calbox에 있는 숫자랑 textbox에 있는 숫자랑 다를 때 ???????????????????????
+            {
+                CalNum = Convert.ToDouble(textBox.Text);
+                TextNum = SumNum * CalNum;
+                CalBox.Text = TextNum + "×";
+                textBox.Text = Convert.ToString(TextNum);
+            }
+            else
+            {
+                CalNum = Convert.ToDouble(textBox.Text);
+                TextNum = SumNum * CalNum;
+                CalBox.Text = TextNum + "×";
+                textBox.Text = Convert.ToString(TextNum);
+            }
+
+            CalNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
+            TextNum = Convert.ToDouble(textBox.Text);
+            Num.TextNum = TextNum;
+            Num.SetNum(ref CalNum, ref TextNum, ref SumNum);
+        }
+
+        private void Divide()
+        {
+            Operator op = new Operator(this.Num);
+            double SumNum = Num.SumNum;
+            double TextNum = Num.TextNum;
+            double CalNum = Num.CalNum;
+
+            if (CalBox.Text == "") // Calbox가 빈칸일 때
+            {
+                CalBox.Text = textBox.Text + "÷";
+                //textBox.Text = Convert.ToString(TextNum);
+                SumNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
+            }
+
+            else if (CalBox.Text.Contains("=")) // 계산이 끝난 후
+            {
+                CalBox.Text = SumNum + "÷";
+                textBox.Text = Convert.ToString(SumNum);
+            }
+
+            else if (TextNum == SumNum) // Calbox에 있는 숫자랑 textbox에 있는 숫자랑 같을 때
+            {
+                CalBox.Text = CalBox.Text.Substring(0, CalBox.Text.Length - 1);
+                CalBox.Text = TextNum + "÷";
+            }
+
+            else if (TextNum != CalNum) // Calbox에 있는 숫자랑 textbox에 있는 숫자랑 다를 때 ???????????????????????
+            {
+                CalNum = Convert.ToDouble(textBox.Text);
+                TextNum = SumNum / CalNum;
+                CalBox.Text = TextNum + "÷";
+                textBox.Text = Convert.ToString(TextNum);
+            }
+            else
+            {
+                CalNum = Convert.ToDouble(textBox.Text);
+                TextNum = SumNum / CalNum;
+                CalBox.Text = TextNum + "÷";
+                textBox.Text = Convert.ToString(TextNum);
+            }
+
             CalNum = Convert.ToDouble(CalBox.Text.Remove(CalBox.Text.Length - 1));
             TextNum = Convert.ToDouble(textBox.Text);
             Num.TextNum = TextNum;
@@ -211,7 +257,7 @@ namespace Calculator_2
             Erase();
         }
 
-        public void Erase()
+        private void Erase()
         {
             textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
             if (textBox.Text.Length == 0)
@@ -234,7 +280,7 @@ namespace Calculator_2
             Clear_E();
         }
 
-        public void Clear_E()
+        private void Clear_E()
         {
             if (CalBox.Text != null)
                 CalBox.Text = "";
@@ -274,7 +320,7 @@ namespace Calculator_2
             Dot();
         }
 
-        public void Dot()
+        private void Dot()
         {
             if (textBox.Text.Contains(".") == false)
             {
@@ -299,7 +345,7 @@ namespace Calculator_2
             Equal();
         }
 
-        public void Equal()
+        private void Equal()
         {
             Operator op = new Operator(this.Num);
 
@@ -311,17 +357,15 @@ namespace Calculator_2
             switch (equal)
             {
                 case "÷":
-                    /*if (CalBox.Text.Contains("="))
+                    if (TextNum == 0)
                     {
-                        string[] save = CalBox.Text.Split("÷");
-                        TextNum = SumNum;
-                        CalNum = Convert.ToDouble(save[1].Remove(save[1].Length - 1));
-                        CalBox.Text = TextNum + "÷" + CalNum + "=";
-                        SumNum = TextNum / CalNum;
-                        textBox.Text = Convert.ToString(SumNum);
-                    }*/
-                    op.Divide();
-                    CalBox.AppendText(Convert.ToString(TextNum) + "=");
+                        textBox.Text = "0으로 나눌 수 없습니다";
+                    }
+                    else
+                    {
+                        op.Divide();
+                        CalBox.AppendText(Convert.ToString(TextNum) + "=");
+                    }
                     break;
                 case "×":
                     op.Multi();
@@ -354,7 +398,7 @@ namespace Calculator_2
             // op.SetTextNum(ref TextNum);
         }  // 버튼을 눌렀을 때
 
-        public void SetNum(string num)
+        private void SetNum(string num)
         {
             double SumNum = Num.SumNum;
             double CalNum = Num.CalNum;
@@ -431,12 +475,16 @@ namespace Calculator_2
                     SetNum(Num);
                     break;
                 case Keys.Add:
+                    Add();
                     break;
                 case Keys.Subtract:
+                    Subtract();
                     break;
                 case Keys.Multiply:
+                    Multiply();
                     break;
                 case Keys.Divide:
+                    Divide();
                     break;
                 case Keys.Delete:
                     Clear_E();
