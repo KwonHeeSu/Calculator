@@ -3,7 +3,7 @@ namespace Calculator_2
     public partial class Form1 : Form
     {
         SaveNum Num = new SaveNum();
-        Operation op = new Operation();
+        Operator op = new Operator();
 
         public Form1()
         {
@@ -35,7 +35,7 @@ namespace Calculator_2
             this.btnce.Click += BtnCe_Click;
 
 
-            textBox.Text = "0";
+            this.textBox.Text = "0";
         }
 
         private void BtnPer_Click(object? sender, EventArgs e)
@@ -293,6 +293,11 @@ namespace Calculator_2
 
         private void Btnequal_Click(object? sender, EventArgs e)
         {
+            Equal();
+        }
+
+        public void Equal()
+        {
             double CalNum = Num.CalNum;
             double TextNum = Num.TextNum;
             double SumNum = Num.SumNum;
@@ -420,7 +425,6 @@ namespace Calculator_2
                     SetNum(Num);
                     break;
                 case Keys.Add:
-
                     break;
                 case Keys.Subtract:
                     break;
@@ -435,7 +439,7 @@ namespace Calculator_2
                     Erase();
                     break;
                 case Keys.Enter:
-
+                    Equal();
                     break;
                 case Keys.Decimal:
                     Dot();
