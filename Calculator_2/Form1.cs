@@ -3,36 +3,36 @@ namespace Calculator_2
     public partial class Form1 : Form
     {
         SaveNum Num = new SaveNum();
-        Operator op = new Operator();
+       
 
         public Form1()
         {
             InitializeComponent();
 
-            this.btnmulti.Click += BtnOp_Click;
+            this.btnDot.Click += BtnDot_Click;
+            this.btnEqual.Click += Btnequal_Click;
+            this.btnPlus.Click += BtnOp_Click;
+            this.btnMinus.Click += BtnOp_Click;
+            this.btnMulti.Click += BtnOp_Click;
+            this.btnDivide.Click += BtnOp_Click;
+            this.btnPer.Click += BtnPer_Click;
+            this.btnN.Click += BtnN_Click;
+            this.btnClear.Click += BtnClear_Click;
+            this.btnErase.Click += BtnErase_Click;
+            this.btnConvert.Click += BtnConvert_Click;
+            this.btnFrac.Click += BtnFrac_Click;
+            this.btnRoot.Click += BtnRoot_Click;
+            this.btnCe.Click += BtnCe_Click;
             this.btn0.Click += BtnNum_Click;
-            this.btndot.Click += BtnDot_Click;
-            this.btnequal.Click += Btnequal_Click;
             this.btn1.Click += BtnNum_Click;
             this.btn2.Click += BtnNum_Click;
             this.btn3.Click += BtnNum_Click;
-            this.btnplus.Click += BtnOp_Click;
             this.btn4.Click += BtnNum_Click;
             this.btn5.Click += BtnNum_Click;
             this.btn6.Click += BtnNum_Click;
-            this.btnminus.Click += BtnOp_Click;
             this.btn7.Click += BtnNum_Click;
             this.btn8.Click += BtnNum_Click;
             this.btn9.Click += BtnNum_Click;
-            this.btndivide.Click += BtnOp_Click;
-            this.btnPer.Click += BtnPer_Click;
-            this.btnn.Click += BtnN_Click;
-            this.btnclear.Click += BtnClear_Click;
-            this.btnerase.Click += BtnErase_Click;
-            this.btnconvert.Click += BtnConvert_Click;
-            this.btnfrac.Click += BtnFrac_Click;
-            this.btnroot.Click += BtnRoot_Click;
-            this.btnce.Click += BtnCe_Click;
 
 
             this.textBox.Text = "0";
@@ -45,6 +45,7 @@ namespace Calculator_2
 
         private void BtnOp_Click(object? sender, EventArgs e)
         {
+            Operator op = new Operator(this.Num);
             Button button = (Button)sender;
             double TextNum = Num.TextNum;
             double CalNum = Num.CalNum;
@@ -285,10 +286,12 @@ namespace Calculator_2
 
         private void BtnConvert_Click(object? sender, EventArgs e)
         {
-            double Text1 = Convert.ToDouble(textBox.Text);
-            Text1 *= -1;
+            double TextNum = Num.TextNum;
+            TextNum *= -1;
 
-            textBox.Text = Convert.ToString(Text1);
+            textBox.Text = Convert.ToString(TextNum);
+
+            Num.TextNum = TextNum;
         }
 
         private void Btnequal_Click(object? sender, EventArgs e)
@@ -298,9 +301,10 @@ namespace Calculator_2
 
         public void Equal()
         {
+            Operator op = new Operator(this.Num);
+
             double CalNum = Num.CalNum;
             double TextNum = Num.TextNum;
-            double SumNum = Num.SumNum;
 
             string equal = CalBox.Text.Substring(CalBox.Text.Length - 1);
 
@@ -316,25 +320,27 @@ namespace Calculator_2
                         SumNum = TextNum / CalNum;
                         textBox.Text = Convert.ToString(SumNum);
                     }*/
-                    SumNum = op.Divide();
+                    op.Divide();
                     CalBox.AppendText(Convert.ToString(TextNum) + "=");
                     break;
                 case "¡¿":
-                    SumNum = op.Multi();
+                    op.Multi();
                     CalBox.AppendText(Convert.ToString(TextNum) + "=");
                     break;
                 case "-":
-                    SumNum = op.Miuns();
+                    op.Miuns();
                     CalBox.AppendText(Convert.ToString(TextNum) + "=");
                     break;
                 case "+":
-                    SumNum = op.Plus();
+                    op.Plus();
                     CalBox.AppendText(Convert.ToString(TextNum) + "=");
                     break;
                 default:
 
                     break;
             }
+            double SumNum = Num.SumNum;
+
             textBox.Text = Convert.ToString(SumNum);
             Num.SetNum(ref CalNum, ref SumNum, ref SumNum);
         }

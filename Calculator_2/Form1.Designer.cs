@@ -32,43 +32,43 @@ namespace Calculator_2
         /// </summary>
         private void InitializeComponent()
         {
-            btnmulti = new Button();
+            btnMulti = new Button();
             btn0 = new Button();
-            btndot = new Button();
-            btnequal = new Button();
+            btnDot = new Button();
+            btnEqual = new Button();
             btn1 = new Button();
             btn2 = new Button();
             btn3 = new Button();
-            btnplus = new Button();
+            btnPlus = new Button();
             btn4 = new Button();
             btn5 = new Button();
             btn6 = new Button();
-            btnminus = new Button();
+            btnMinus = new Button();
             btn7 = new Button();
             btn8 = new Button();
             btn9 = new Button();
-            btndivide = new Button();
+            btnDivide = new Button();
             btnPer = new Button();
-            btnn = new Button();
-            btnclear = new Button();
-            btnerase = new Button();
+            btnN = new Button();
+            btnClear = new Button();
+            btnErase = new Button();
             textBox = new TextBox();
             CalBox = new TextBox();
-            btnce = new Button();
-            btnfrac = new Button();
-            btnconvert = new Button();
-            btnroot = new Button();
+            btnCe = new Button();
+            btnFrac = new Button();
+            btnConvert = new Button();
+            btnRoot = new Button();
             SuspendLayout();
             // 
             // btnmulti
             // 
-            btnmulti.Location = new Point(223, 248);
-            btnmulti.Name = "btnmulti";
-            btnmulti.Size = new Size(65, 43);
-            btnmulti.TabIndex = 0;
-            btnmulti.TabStop = false;
-            btnmulti.Text = "×";
-            btnmulti.UseVisualStyleBackColor = true;
+            btnMulti.Location = new Point(223, 248);
+            btnMulti.Name = "btnmulti";
+            btnMulti.Size = new Size(65, 43);
+            btnMulti.TabIndex = 0;
+            btnMulti.TabStop = false;
+            btnMulti.Text = "×";
+            btnMulti.UseVisualStyleBackColor = true;
             // 
             // btn0
             // 
@@ -82,23 +82,23 @@ namespace Calculator_2
             // 
             // btndot
             // 
-            btndot.Location = new Point(154, 395);
-            btndot.Name = "btndot";
-            btndot.Size = new Size(65, 43);
-            btndot.TabIndex = 0;
-            btndot.TabStop = false;
-            btndot.Text = ".";
-            btndot.UseVisualStyleBackColor = true;
+            btnDot.Location = new Point(154, 395);
+            btnDot.Name = "btndot";
+            btnDot.Size = new Size(65, 43);
+            btnDot.TabIndex = 0;
+            btnDot.TabStop = false;
+            btnDot.Text = ".";
+            btnDot.UseVisualStyleBackColor = true;
             // 
             // btnequal
             // 
-            btnequal.Location = new Point(223, 395);
-            btnequal.Name = "btnequal";
-            btnequal.Size = new Size(65, 43);
-            btnequal.TabIndex = 0;
-            btnequal.TabStop = false;
-            btnequal.Text = "=";
-            btnequal.UseVisualStyleBackColor = true;
+            btnEqual.Location = new Point(223, 395);
+            btnEqual.Name = "btnequal";
+            btnEqual.Size = new Size(65, 43);
+            btnEqual.TabIndex = 0;
+            btnEqual.TabStop = false;
+            btnEqual.Text = "=";
+            btnEqual.UseVisualStyleBackColor = true;
             // 
             // btn1
             // 
@@ -132,13 +132,13 @@ namespace Calculator_2
             // 
             // btnplus
             // 
-            btnplus.Location = new Point(223, 346);
-            btnplus.Name = "btnplus";
-            btnplus.Size = new Size(65, 43);
-            btnplus.TabIndex = 0;
-            btnplus.TabStop = false;
-            btnplus.Text = "+";
-            btnplus.UseVisualStyleBackColor = true;
+            btnPlus.Location = new Point(223, 346);
+            btnPlus.Name = "btnplus";
+            btnPlus.Size = new Size(65, 43);
+            btnPlus.TabIndex = 0;
+            btnPlus.TabStop = false;
+            btnPlus.Text = "+";
+            btnPlus.UseVisualStyleBackColor = true;
             // 
             // btn4
             // 
@@ -172,13 +172,13 @@ namespace Calculator_2
             // 
             // btnminus
             // 
-            btnminus.Location = new Point(223, 297);
-            btnminus.Name = "btnminus";
-            btnminus.Size = new Size(65, 43);
-            btnminus.TabIndex = 0;
-            btnminus.TabStop = false;
-            btnminus.Text = "-";
-            btnminus.UseVisualStyleBackColor = true;
+            btnMinus.Location = new Point(223, 297);
+            btnMinus.Name = "btnminus";
+            btnMinus.Size = new Size(65, 43);
+            btnMinus.TabIndex = 0;
+            btnMinus.TabStop = false;
+            btnMinus.Text = "-";
+            btnMinus.UseVisualStyleBackColor = true;
             // 
             // btn7
             // 
@@ -212,13 +212,13 @@ namespace Calculator_2
             // 
             // btndivide
             // 
-            btndivide.Location = new Point(223, 199);
-            btndivide.Name = "btndivide";
-            btndivide.Size = new Size(65, 43);
-            btndivide.TabIndex = 0;
-            btndivide.TabStop = false;
-            btndivide.Text = "÷";
-            btndivide.UseVisualStyleBackColor = true;
+            btnDivide.Location = new Point(223, 199);
+            btnDivide.Name = "btndivide";
+            btnDivide.Size = new Size(65, 43);
+            btnDivide.TabIndex = 0;
+            btnDivide.TabStop = false;
+            btnDivide.Text = "÷";
+            btnDivide.UseVisualStyleBackColor = true;
             // 
             // btnPer
             // 
@@ -232,38 +232,38 @@ namespace Calculator_2
             // 
             // btnn
             // 
-            btnn.Location = new Point(83, 199);
-            btnn.Name = "btnn";
-            btnn.Size = new Size(65, 43);
-            btnn.TabIndex = 0;
-            btnn.TabStop = false;
-            btnn.Text = "x^2";
-            btnn.UseVisualStyleBackColor = true;
+            btnN.Location = new Point(83, 199);
+            btnN.Name = "btnn";
+            btnN.Size = new Size(65, 43);
+            btnN.TabIndex = 0;
+            btnN.TabStop = false;
+            btnN.Text = "x^2";
+            btnN.UseVisualStyleBackColor = true;
             // 
             // btnclear
             // 
-            btnclear.Location = new Point(152, 150);
-            btnclear.Name = "btnclear";
-            btnclear.Size = new Size(65, 43);
-            btnclear.TabIndex = 0;
-            btnclear.TabStop = false;
-            btnclear.Text = "C";
-            btnclear.UseVisualStyleBackColor = true;
+            btnClear.Location = new Point(152, 150);
+            btnClear.Name = "btnclear";
+            btnClear.Size = new Size(65, 43);
+            btnClear.TabIndex = 0;
+            btnClear.TabStop = false;
+            btnClear.Text = "C";
+            btnClear.UseVisualStyleBackColor = true;
             // 
             // btnerase
             // 
-            btnerase.BackColor = SystemColors.ControlLight;
-            btnerase.FlatAppearance.BorderColor = Color.White;
-            btnerase.FlatAppearance.BorderSize = 0;
-            btnerase.FlatAppearance.MouseDownBackColor = Color.White;
-            btnerase.FlatAppearance.MouseOverBackColor = Color.White;
-            btnerase.Location = new Point(223, 150);
-            btnerase.Name = "btnerase";
-            btnerase.Size = new Size(65, 43);
-            btnerase.TabIndex = 0;
-            btnerase.TabStop = false;
-            btnerase.Text = "←";
-            btnerase.UseVisualStyleBackColor = false;
+            btnErase.BackColor = SystemColors.ControlLight;
+            btnErase.FlatAppearance.BorderColor = Color.White;
+            btnErase.FlatAppearance.BorderSize = 0;
+            btnErase.FlatAppearance.MouseDownBackColor = Color.White;
+            btnErase.FlatAppearance.MouseOverBackColor = Color.White;
+            btnErase.Location = new Point(223, 150);
+            btnErase.Name = "btnerase";
+            btnErase.Size = new Size(65, 43);
+            btnErase.TabIndex = 0;
+            btnErase.TabStop = false;
+            btnErase.Text = "←";
+            btnErase.UseVisualStyleBackColor = false;
             // 
             // textBox
             // 
@@ -292,43 +292,43 @@ namespace Calculator_2
             // 
             // btnce
             // 
-            btnce.Location = new Point(83, 150);
-            btnce.Name = "btnce";
-            btnce.Size = new Size(65, 43);
-            btnce.TabIndex = 0;
-            btnce.TabStop = false;
-            btnce.Text = "CE";
-            btnce.UseVisualStyleBackColor = true;
+            btnCe.Location = new Point(83, 150);
+            btnCe.Name = "btnce";
+            btnCe.Size = new Size(65, 43);
+            btnCe.TabIndex = 0;
+            btnCe.TabStop = false;
+            btnCe.Text = "CE";
+            btnCe.UseVisualStyleBackColor = true;
             // 
             // btnfrac
             // 
-            btnfrac.Location = new Point(12, 199);
-            btnfrac.Name = "btnfrac";
-            btnfrac.Size = new Size(65, 43);
-            btnfrac.TabIndex = 0;
-            btnfrac.TabStop = false;
-            btnfrac.Text = "1/x";
-            btnfrac.UseVisualStyleBackColor = true;
+            btnFrac.Location = new Point(12, 199);
+            btnFrac.Name = "btnfrac";
+            btnFrac.Size = new Size(65, 43);
+            btnFrac.TabIndex = 0;
+            btnFrac.TabStop = false;
+            btnFrac.Text = "1/x";
+            btnFrac.UseVisualStyleBackColor = true;
             // 
             // btnconvert
             // 
-            btnconvert.Location = new Point(12, 395);
-            btnconvert.Name = "btnconvert";
-            btnconvert.Size = new Size(65, 43);
-            btnconvert.TabIndex = 0;
-            btnconvert.TabStop = false;
-            btnconvert.Text = "+/-";
-            btnconvert.UseVisualStyleBackColor = true;
+            btnConvert.Location = new Point(12, 395);
+            btnConvert.Name = "btnconvert";
+            btnConvert.Size = new Size(65, 43);
+            btnConvert.TabIndex = 0;
+            btnConvert.TabStop = false;
+            btnConvert.Text = "+/-";
+            btnConvert.UseVisualStyleBackColor = true;
             // 
             // btnroot
             // 
-            btnroot.Location = new Point(152, 199);
-            btnroot.Name = "btnroot";
-            btnroot.Size = new Size(65, 43);
-            btnroot.TabIndex = 0;
-            btnroot.TabStop = false;
-            btnroot.Text = "√x";
-            btnroot.UseVisualStyleBackColor = true;
+            btnRoot.Location = new Point(152, 199);
+            btnRoot.Name = "btnroot";
+            btnRoot.Size = new Size(65, 43);
+            btnRoot.TabIndex = 0;
+            btnRoot.TabStop = false;
+            btnRoot.Text = "√x";
+            btnRoot.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -337,30 +337,30 @@ namespace Calculator_2
             ClientSize = new Size(300, 450);
             Controls.Add(CalBox);
             Controls.Add(textBox);
-            Controls.Add(btnroot);
-            Controls.Add(btnerase);
-            Controls.Add(btnclear);
-            Controls.Add(btndivide);
+            Controls.Add(btnRoot);
+            Controls.Add(btnErase);
+            Controls.Add(btnClear);
+            Controls.Add(btnDivide);
             Controls.Add(btn9);
-            Controls.Add(btnminus);
-            Controls.Add(btnconvert);
+            Controls.Add(btnMinus);
+            Controls.Add(btnConvert);
             Controls.Add(btn6);
-            Controls.Add(btnn);
-            Controls.Add(btnplus);
+            Controls.Add(btnN);
+            Controls.Add(btnPlus);
             Controls.Add(btn8);
             Controls.Add(btn3);
-            Controls.Add(btnfrac);
+            Controls.Add(btnFrac);
             Controls.Add(btn5);
             Controls.Add(btnPer);
-            Controls.Add(btnequal);
+            Controls.Add(btnEqual);
             Controls.Add(btn7);
             Controls.Add(btn2);
             Controls.Add(btn4);
-            Controls.Add(btndot);
+            Controls.Add(btnDot);
             Controls.Add(btn1);
-            Controls.Add(btnce);
+            Controls.Add(btnCe);
             Controls.Add(btn0);
-            Controls.Add(btnmulti);
+            Controls.Add(btnMulti);
             KeyPreview = true;
             Name = "Form1";
             Text = "Form1";
@@ -371,31 +371,31 @@ namespace Calculator_2
 
         #endregion
 
-        private Button btnmulti;
+        private Button btnMulti;
         private Button btn0;
-        private Button btndot;
-        private Button btnequal;
+        private Button btnDot;
+        private Button btnEqual;
         private Button btn1;
         private Button btn2;
         private Button btn3;
-        private Button btnplus;
+        private Button btnPlus;
         private Button btn4;
         private Button btn5;
         private Button btn6;
-        private Button btnminus;
+        private Button btnMinus;
         private Button btn7;
         private Button btn8;
         private Button btn9;
-        private Button btndivide;
+        private Button btnDivide;
         private Button btnPer;
-        private Button btnn;
-        private Button btnclear;
-        private Button btnerase;
+        private Button btnN;
+        private Button btnClear;
+        private Button btnErase;
         private TextBox textBox;
         private TextBox CalBox;
-        private Button btnce;
-        private Button btnfrac;
-        private Button btnconvert;
-        private Button btnroot;
+        private Button btnCe;
+        private Button btnFrac;
+        private Button btnConvert;
+        private Button btnRoot;
     }
 }
