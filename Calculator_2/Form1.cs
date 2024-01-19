@@ -15,7 +15,6 @@ namespace Calculator_2
             this.btnMinus.Click += BtnOp_Click;
             this.btnMulti.Click += BtnOp_Click;
             this.btnDivide.Click += BtnOp_Click;
-            this.btnPer.Click += BtnPer_Click;
             this.btnN.Click += BtnN_Click;
             this.btnClear.Click += BtnClear_Click;
             this.btnErase.Click += BtnErase_Click;
@@ -38,11 +37,6 @@ namespace Calculator_2
             this.textBox.Text = "0";
         }
 
-        private void BtnPer_Click(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void BtnOp_Click(object? sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -62,6 +56,7 @@ namespace Calculator_2
                     Divide();
                     break;
             }
+            this.ActiveControl = null;
         }
 
         private void Add()
@@ -255,6 +250,7 @@ namespace Calculator_2
         private void BtnErase_Click(object? sender, EventArgs e)
         {
             Erase();
+            this.ActiveControl = null;
         }
 
         private void Erase()
@@ -273,11 +269,13 @@ namespace Calculator_2
             CalBox.Text = "";
             double Re = 0;
             Num.SetNum(ref Re, ref Re, ref Re);
+            this.ActiveControl = null;
         }
 
         private void BtnCe_Click(object? sender, EventArgs e)
         {
             Clear_E();
+            this.ActiveControl = null;
         }
 
         private void Clear_E()
@@ -295,6 +293,7 @@ namespace Calculator_2
             textBox.Text = Convert.ToString(1 / TextNum);
             double SumNum = Convert.ToDouble(textBox.Text);
             Num.SumNum = SumNum;
+            this.ActiveControl = null;
         }
 
         private void BtnN_Click(object? sender, EventArgs e)
@@ -304,6 +303,7 @@ namespace Calculator_2
             textBox.Text = Convert.ToString(TextNum * TextNum);
             double SumNum = Convert.ToDouble(textBox.Text);
             Num.SumNum = SumNum;
+            this.ActiveControl = null;
         }
 
         private void BtnRoot_Click(object? sender, EventArgs e)
@@ -313,11 +313,13 @@ namespace Calculator_2
             textBox.Text = Convert.ToString(Math.Sqrt(TextNum));
             double SumNum = Convert.ToDouble(textBox.Text);
             Num.SumNum = SumNum;
+            this.ActiveControl = null;
         }
 
         private void BtnDot_Click(object? sender, EventArgs e)
         {
             Dot();
+            this.ActiveControl = null;
         }
 
         private void Dot()
@@ -338,11 +340,13 @@ namespace Calculator_2
             textBox.Text = Convert.ToString(TextNum);
 
             Num.TextNum = TextNum;
+            this.ActiveControl = null;
         }
 
         private void Btnequal_Click(object? sender, EventArgs e)
         {
             Equal();
+            this.ActiveControl = null;
         }
 
         private void Equal()
@@ -351,6 +355,8 @@ namespace Calculator_2
 
             double CalNum = Num.CalNum;
             double TextNum = Num.TextNum;
+            double SumNum = Num.SumNum;
+            double SaveNum = Num.SaveTextNum;
 
             string equal = CalBox.Text.Substring(CalBox.Text.Length - 1);
 
@@ -366,24 +372,55 @@ namespace Calculator_2
                         op.Divide();
                         CalBox.AppendText(Convert.ToString(TextNum) + "=");
                     }
+                    Num.SaveTextNum = TextNum;
                     break;
                 case "×":
                     op.Multi();
                     CalBox.AppendText(Convert.ToString(TextNum) + "=");
+                    Num.SaveTextNum = TextNum;
                     break;
                 case "-":
                     op.Miuns();
                     CalBox.AppendText(Convert.ToString(TextNum) + "=");
+                    Num.SaveTextNum = TextNum;
                     break;
                 case "+":
                     op.Plus();
                     CalBox.AppendText(Convert.ToString(TextNum) + "=");
+                    Num.SaveTextNum = TextNum;
+                    break;
+                case "=":
+
+                    Num.CalNum = SumNum;
+                    Num.TextNum = SaveNum;
+                    TextNum = SaveNum;
+                    if (CalBox.Text.Contains("+"))
+                    {
+                        op.Plus();
+                        CalBox.Text = SumNum + "+" + TextNum + "=";
+                    }
+                    else if (CalBox.Text.Contains("-"))
+                    {
+                        op.Miuns();
+                        CalBox.Text = SumNum + "-" + TextNum + "=";
+                    }
+                    else if (CalBox.Text.Contains("×"))
+                    {
+                        op.Multi();
+                        CalBox.Text = SumNum + "×" + TextNum + "=";
+                    }
+                    else if (CalBox.Text.Contains("÷"))
+                    {
+                        op.Divide();
+                        CalBox.Text = SumNum + "÷" + TextNum + "=";
+                    }
                     break;
                 default:
 
                     break;
             }
-            double SumNum = Num.SumNum;
+            SumNum = Num.SumNum;
+            SaveNum = TextNum;
 
             textBox.Text = Convert.ToString(SumNum);
             Num.SetNum(ref CalNum, ref SumNum, ref SumNum);
@@ -394,6 +431,7 @@ namespace Calculator_2
             Button NumBtn = (Button)sender;
             SetNum(NumBtn.Text);
             textBox.Select(textBox.Text.Length, 0);
+            this.ActiveControl = null;
             // double TextNum = Convert.ToDouble(textBox.Text);
             // op.SetTextNum(ref TextNum);
         }  // 버튼을 눌렀을 때
@@ -431,6 +469,7 @@ namespace Calculator_2
 
         private void TextBox_KeyDown(object sender, KeyEventArgs e)
         {
+            this.ActiveControl = null;
             string Num;
             switch (e.KeyCode)
             {

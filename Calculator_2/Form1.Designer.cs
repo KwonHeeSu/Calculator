@@ -60,10 +60,11 @@ namespace Calculator_2
             btnRoot = new Button();
             SuspendLayout();
             // 
-            // btnmulti
+            // btnMulti
             // 
+            btnMulti.CausesValidation = false;
             btnMulti.Location = new Point(223, 248);
-            btnMulti.Name = "btnmulti";
+            btnMulti.Name = "btnMulti";
             btnMulti.Size = new Size(65, 43);
             btnMulti.TabIndex = 0;
             btnMulti.TabStop = false;
@@ -72,6 +73,7 @@ namespace Calculator_2
             // 
             // btn0
             // 
+            btn0.CausesValidation = false;
             btn0.Location = new Point(83, 395);
             btn0.Name = "btn0";
             btn0.Size = new Size(65, 43);
@@ -80,20 +82,22 @@ namespace Calculator_2
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
             // 
-            // btndot
+            // btnDot
             // 
+            btnDot.CausesValidation = false;
             btnDot.Location = new Point(154, 395);
-            btnDot.Name = "btndot";
+            btnDot.Name = "btnDot";
             btnDot.Size = new Size(65, 43);
             btnDot.TabIndex = 0;
             btnDot.TabStop = false;
             btnDot.Text = ".";
             btnDot.UseVisualStyleBackColor = true;
             // 
-            // btnequal
+            // btnEqual
             // 
+            btnEqual.CausesValidation = false;
             btnEqual.Location = new Point(223, 395);
-            btnEqual.Name = "btnequal";
+            btnEqual.Name = "btnEqual";
             btnEqual.Size = new Size(65, 43);
             btnEqual.TabIndex = 0;
             btnEqual.TabStop = false;
@@ -102,6 +106,7 @@ namespace Calculator_2
             // 
             // btn1
             // 
+            btn1.CausesValidation = false;
             btn1.Location = new Point(12, 346);
             btn1.Name = "btn1";
             btn1.Size = new Size(65, 43);
@@ -112,6 +117,7 @@ namespace Calculator_2
             // 
             // btn2
             // 
+            btn2.CausesValidation = false;
             btn2.Location = new Point(83, 346);
             btn2.Name = "btn2";
             btn2.Size = new Size(65, 43);
@@ -122,6 +128,7 @@ namespace Calculator_2
             // 
             // btn3
             // 
+            btn3.CausesValidation = false;
             btn3.Location = new Point(154, 346);
             btn3.Name = "btn3";
             btn3.Size = new Size(65, 43);
@@ -130,10 +137,11 @@ namespace Calculator_2
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
             // 
-            // btnplus
+            // btnPlus
             // 
+            btnPlus.CausesValidation = false;
             btnPlus.Location = new Point(223, 346);
-            btnPlus.Name = "btnplus";
+            btnPlus.Name = "btnPlus";
             btnPlus.Size = new Size(65, 43);
             btnPlus.TabIndex = 0;
             btnPlus.TabStop = false;
@@ -142,6 +150,7 @@ namespace Calculator_2
             // 
             // btn4
             // 
+            btn4.CausesValidation = false;
             btn4.Location = new Point(12, 297);
             btn4.Name = "btn4";
             btn4.Size = new Size(65, 43);
@@ -152,6 +161,7 @@ namespace Calculator_2
             // 
             // btn5
             // 
+            btn5.CausesValidation = false;
             btn5.Location = new Point(83, 297);
             btn5.Name = "btn5";
             btn5.Size = new Size(65, 43);
@@ -162,6 +172,7 @@ namespace Calculator_2
             // 
             // btn6
             // 
+            btn6.CausesValidation = false;
             btn6.Location = new Point(153, 297);
             btn6.Name = "btn6";
             btn6.Size = new Size(65, 43);
@@ -170,10 +181,11 @@ namespace Calculator_2
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
             // 
-            // btnminus
+            // btnMinus
             // 
+            btnMinus.CausesValidation = false;
             btnMinus.Location = new Point(223, 297);
-            btnMinus.Name = "btnminus";
+            btnMinus.Name = "btnMinus";
             btnMinus.Size = new Size(65, 43);
             btnMinus.TabIndex = 0;
             btnMinus.TabStop = false;
@@ -182,6 +194,7 @@ namespace Calculator_2
             // 
             // btn7
             // 
+            btn7.CausesValidation = false;
             btn7.Location = new Point(12, 248);
             btn7.Name = "btn7";
             btn7.Size = new Size(65, 43);
@@ -192,6 +205,7 @@ namespace Calculator_2
             // 
             // btn8
             // 
+            btn8.CausesValidation = false;
             btn8.Location = new Point(83, 248);
             btn8.Name = "btn8";
             btn8.Size = new Size(65, 43);
@@ -202,6 +216,7 @@ namespace Calculator_2
             // 
             // btn9
             // 
+            btn9.CausesValidation = false;
             btn9.Location = new Point(153, 248);
             btn9.Name = "btn9";
             btn9.Size = new Size(65, 43);
@@ -210,10 +225,11 @@ namespace Calculator_2
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
             // 
-            // btndivide
+            // btnDivide
             // 
+            btnDivide.CausesValidation = false;
             btnDivide.Location = new Point(223, 199);
-            btnDivide.Name = "btndivide";
+            btnDivide.Name = "btnDivide";
             btnDivide.Size = new Size(65, 43);
             btnDivide.TabIndex = 0;
             btnDivide.TabStop = false;
@@ -222,6 +238,7 @@ namespace Calculator_2
             // 
             // btnPer
             // 
+            btnPer.CausesValidation = false;
             btnPer.Location = new Point(12, 150);
             btnPer.Name = "btnPer";
             btnPer.Size = new Size(65, 43);
@@ -230,35 +247,38 @@ namespace Calculator_2
             btnPer.Text = "%";
             btnPer.UseVisualStyleBackColor = true;
             // 
-            // btnn
+            // btnN
             // 
+            btnN.CausesValidation = false;
             btnN.Location = new Point(83, 199);
-            btnN.Name = "btnn";
+            btnN.Name = "btnN";
             btnN.Size = new Size(65, 43);
             btnN.TabIndex = 0;
             btnN.TabStop = false;
             btnN.Text = "x^2";
             btnN.UseVisualStyleBackColor = true;
             // 
-            // btnclear
+            // btnClear
             // 
+            btnClear.CausesValidation = false;
             btnClear.Location = new Point(152, 150);
-            btnClear.Name = "btnclear";
+            btnClear.Name = "btnClear";
             btnClear.Size = new Size(65, 43);
             btnClear.TabIndex = 0;
             btnClear.TabStop = false;
             btnClear.Text = "C";
             btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnerase
+            // btnErase
             // 
             btnErase.BackColor = SystemColors.ControlLight;
+            btnErase.CausesValidation = false;
             btnErase.FlatAppearance.BorderColor = Color.White;
             btnErase.FlatAppearance.BorderSize = 0;
             btnErase.FlatAppearance.MouseDownBackColor = Color.White;
             btnErase.FlatAppearance.MouseOverBackColor = Color.White;
             btnErase.Location = new Point(223, 150);
-            btnErase.Name = "btnerase";
+            btnErase.Name = "btnErase";
             btnErase.Size = new Size(65, 43);
             btnErase.TabIndex = 0;
             btnErase.TabStop = false;
@@ -269,6 +289,7 @@ namespace Calculator_2
             // 
             textBox.BackColor = SystemColors.Menu;
             textBox.BorderStyle = BorderStyle.None;
+            textBox.CausesValidation = false;
             textBox.Cursor = Cursors.IBeam;
             textBox.Location = new Point(12, 79);
             textBox.Name = "textBox";
@@ -280,6 +301,7 @@ namespace Calculator_2
             // CalBox
             // 
             CalBox.BorderStyle = BorderStyle.None;
+            CalBox.CausesValidation = false;
             CalBox.Cursor = Cursors.IBeam;
             CalBox.Enabled = false;
             CalBox.Location = new Point(12, 50);
@@ -290,40 +312,44 @@ namespace Calculator_2
             CalBox.TabStop = false;
             CalBox.TextAlign = HorizontalAlignment.Right;
             // 
-            // btnce
+            // btnCe
             // 
+            btnCe.CausesValidation = false;
             btnCe.Location = new Point(83, 150);
-            btnCe.Name = "btnce";
+            btnCe.Name = "btnCe";
             btnCe.Size = new Size(65, 43);
             btnCe.TabIndex = 0;
             btnCe.TabStop = false;
             btnCe.Text = "CE";
             btnCe.UseVisualStyleBackColor = true;
             // 
-            // btnfrac
+            // btnFrac
             // 
+            btnFrac.CausesValidation = false;
             btnFrac.Location = new Point(12, 199);
-            btnFrac.Name = "btnfrac";
+            btnFrac.Name = "btnFrac";
             btnFrac.Size = new Size(65, 43);
             btnFrac.TabIndex = 0;
             btnFrac.TabStop = false;
             btnFrac.Text = "1/x";
             btnFrac.UseVisualStyleBackColor = true;
             // 
-            // btnconvert
+            // btnConvert
             // 
+            btnConvert.CausesValidation = false;
             btnConvert.Location = new Point(12, 395);
-            btnConvert.Name = "btnconvert";
+            btnConvert.Name = "btnConvert";
             btnConvert.Size = new Size(65, 43);
             btnConvert.TabIndex = 0;
             btnConvert.TabStop = false;
             btnConvert.Text = "+/-";
             btnConvert.UseVisualStyleBackColor = true;
             // 
-            // btnroot
+            // btnRoot
             // 
+            btnRoot.CausesValidation = false;
             btnRoot.Location = new Point(152, 199);
-            btnRoot.Name = "btnroot";
+            btnRoot.Name = "btnRoot";
             btnRoot.Size = new Size(65, 43);
             btnRoot.TabIndex = 0;
             btnRoot.TabStop = false;
